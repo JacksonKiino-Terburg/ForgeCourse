@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mccourse:alexandrite_block"
+    },
+    "I": {
+      "item": "mccourse:alexandrite"
+    }
+  },
+  "pattern": [
+    "IAI",
+    "IAI"
+  ],
+  "result": {
+    "item": "mccourse:alexandrite_fence_gate"
+  },
+  "show_notification": true
+}

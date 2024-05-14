@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mccourse:alexandrite_block"
+    },
+    "I": {
+      "item": "mccourse:alexandrite"
+    }
+  },
+  "pattern": [
+    "AIA",
+    "AIA"
+  ],
+  "result": {
+    "count": 6,
+    "item": "mccourse:alexandrite_fence"
+  },
+  "show_notification": true
+}
