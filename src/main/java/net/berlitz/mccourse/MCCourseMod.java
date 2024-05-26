@@ -2,6 +2,7 @@ package net.berlitz.mccourse;
 
 import com.mojang.logging.LogUtils;
 import net.berlitz.mccourse.block.ModBlocks;
+import net.berlitz.mccourse.enchantment.ModEnchantments;
 import net.berlitz.mccourse.item.ModCreativeModeTabs;
 import net.berlitz.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -31,6 +32,7 @@ public class MCCourseMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModEnchantments.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
