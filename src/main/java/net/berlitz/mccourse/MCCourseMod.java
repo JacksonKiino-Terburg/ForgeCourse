@@ -4,8 +4,13 @@ import com.mojang.logging.LogUtils;
 import net.berlitz.mccourse.block.ModBlocks;
 import net.berlitz.mccourse.enchantment.ModEnchantments;
 import net.berlitz.mccourse.item.ModCreativeModeTabs;
+import net.berlitz.mccourse.item.ModItemProperties;
 import net.berlitz.mccourse.item.ModItems;
+import net.berlitz.mccourse.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,6 +38,7 @@ public class MCCourseMod {
         ModBlocks.register(modEventBus);
 
         ModEnchantments.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -41,7 +47,11 @@ public class MCCourseMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI_SEEDS.get(), 0.20f);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SNAPDRAGON.getId(), ModBlocks.POTTED_SNAPDRAGON);
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -67,7 +77,10 @@ public class MCCourseMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            event.enqueueWork(() -> {
+                ModItemProperties.addCustomItemProperties();
 
+            });
         }
     }
 }

@@ -18,6 +18,8 @@
   "item.mccourse.alexandrite_leggings": "Alexandrite Leggings",
   "item.mccourse.alexandrite_boots": "Alexandrite Boots",
   "item.mccourse.alexandrite_horse_armor": "Alexandrite Horse Armor",
+  "item.mccourse.data_tablet": "Data Tablet",
+  "item.mccourse.kohlrabi_seeds": "Kohlrabi Seeds",
 
   "block.mccourse.alexandrite_block": "Block of Alexandrite",
   "block.mccourse.raw_alexandrite_block": "Block of Raw Alexandrite",
@@ -25,11 +27,13 @@
   "block.mccourse.deepslate_alexandrite_ore": "Deepslate Alexandrite Ore",
   "block.mccourse.nether_alexandrite_ore": "Netherrack Alexandrite Ore",
   "block.mccourse.end_stone_alexandrite_ore": "End Stone Alexandrite Ore",
+  "block.mccourse.snapdragon": "Snapdragon",
 
   "creativetab.course_tab": "Course Tab",
 
   "item.mccourse.metal_detector.no_valuables": "No Valuables Found",
   "block.mccourse.sound_block": "Sound Block",
+  "sounds.mccourse.metal_detector_found_ore": "Metal Detector Found an Ore",
 
   "block.mccourse.alexandrite_stairs": "Alexandrite Stairs",
   "block.mccourse.alexandrite_slab": "Alexandrite Slab",
