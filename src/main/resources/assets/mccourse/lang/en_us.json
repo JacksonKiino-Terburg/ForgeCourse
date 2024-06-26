@@ -20,6 +20,11 @@
   "item.mccourse.alexandrite_horse_armor": "Alexandrite Horse Armor",
   "item.mccourse.data_tablet": "Data Tablet",
   "item.mccourse.kohlrabi_seeds": "Kohlrabi Seeds",
+  "item.mccourse.bar_brawl_record": "Bar Brawl Music Disc",
+  "item.mccourse.bar_brawl_record.desc": "Bryan Tech - Bar Brawl (CC0)",
+  "item.mccourse.radiation_staff": "Radiation Staff",
+  "item.mccourse.alexandrite_bow": "Alexandrite Bow",
+  "item.mccourse.alexandrite_shield": "Alexandrite Shield",
 
   "block.mccourse.alexandrite_block": "Block of Alexandrite",
   "block.mccourse.raw_alexandrite_block": "Block of Raw Alexandrite",
@@ -28,6 +33,8 @@
   "block.mccourse.nether_alexandrite_ore": "Netherrack Alexandrite Ore",
   "block.mccourse.end_stone_alexandrite_ore": "End Stone Alexandrite Ore",
   "block.mccourse.snapdragon": "Snapdragon",
+
+  "block.mccourse.gem_empowering_station": "Gem Empowering Station",
 
   "creativetab.course_tab": "Course Tab",
 
@@ -45,6 +52,13 @@
   "block.mccourse.alexandrite_door": "Alexandrite Door",
   "block.mccourse.alexandrite_trapdoor": "Alexandrite Trapdoor",
   "block.mccourse.alexandrite_lamp": "Alexandrite Lamp",
+
+  "painting.mccourse.world.title": "World",
+  "painting.mccourse.world.author": "NanoAttack",
+  "painting.mccourse.shrimp.title": "Shrimp",
+  "painting.mccourse.shrimp.author": "NanoAttack",
+  "painting.mccourse.saw_them.title": "Saw Them",
+  "painting.mccourse.saw_them.author": "NanoAttack",
 
 
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valueables!",

@@ -62,6 +62,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockWithItem(ModBlocks.POTTED_SNAPDRAGON.get(), models().singleTexture("potted_snapdragon", new ResourceLocation("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.SNAPDRAGON.get())).renderType("cutout"));
+
+        horizontalBlock(ModBlocks.GEM_EMPOWERING_STATION.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/gem_empowering_station")));
     }
 
     public void makeCrop(CropBlock block, String modelName, String textureName) {

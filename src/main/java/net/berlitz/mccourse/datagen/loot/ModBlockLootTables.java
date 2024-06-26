@@ -57,6 +57,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.SNAPDRAGON.get());
         this.add(ModBlocks.POTTED_SNAPDRAGON.get(), createPotFlowerItemTable(ModBlocks.SNAPDRAGON.get()));
+        this.dropSelf(ModBlocks.GEM_EMPOWERING_STATION.get());
     }
 
     @Override

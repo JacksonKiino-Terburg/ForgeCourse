@@ -2,6 +2,7 @@ package net.berlitz.mccourse.block;
 
 import net.berlitz.mccourse.MCCourseMod;
 import net.berlitz.mccourse.block.custom.AlexandriteLampBlock;
+import net.berlitz.mccourse.block.custom.GemEmpoweringStationBlock;
 import net.berlitz.mccourse.block.custom.KohlrabiCropBlock;
 import net.berlitz.mccourse.block.custom.SoundBlock;
 import net.berlitz.mccourse.item.ModItems;
@@ -90,6 +91,9 @@ public class ModBlocks {
     //MUST do BLOCKS.register for crops since they have no associated block item
     public static final RegistryObject<Block> KOHLRABI_CROP = BLOCKS.register("kohlrabi_crop",
             () -> new KohlrabiCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
+
+    public static final RegistryObject<Block> GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
+            () -> new GemEmpoweringStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

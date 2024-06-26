@@ -6,6 +6,8 @@ import net.berlitz.mccourse.enchantment.ModEnchantments;
 import net.berlitz.mccourse.item.ModCreativeModeTabs;
 import net.berlitz.mccourse.item.ModItemProperties;
 import net.berlitz.mccourse.item.ModItems;
+import net.berlitz.mccourse.loot.ModLootModifiers;
+import net.berlitz.mccourse.painting.ModPaintings;
 import net.berlitz.mccourse.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -39,6 +41,9 @@ public class MCCourseMod {
 
         ModEnchantments.register(modEventBus);
         ModSounds.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
