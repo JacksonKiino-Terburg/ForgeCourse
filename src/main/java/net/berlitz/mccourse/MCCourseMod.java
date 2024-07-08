@@ -2,19 +2,26 @@ package net.berlitz.mccourse;
 
 import com.mojang.logging.LogUtils;
 import net.berlitz.mccourse.block.ModBlocks;
+import net.berlitz.mccourse.effect.ModEffects;
 import net.berlitz.mccourse.enchantment.ModEnchantments;
 import net.berlitz.mccourse.item.ModCreativeModeTabs;
 import net.berlitz.mccourse.item.ModItemProperties;
 import net.berlitz.mccourse.item.ModItems;
 import net.berlitz.mccourse.loot.ModLootModifiers;
 import net.berlitz.mccourse.painting.ModPaintings;
+import net.berlitz.mccourse.potion.BetterBrewingRecipe;
+import net.berlitz.mccourse.potion.ModPotions;
 import net.berlitz.mccourse.sound.ModSounds;
+import net.berlitz.mccourse.villager.ModVillagers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -45,6 +52,11 @@ public class MCCourseMod {
         ModLootModifiers.register(modEventBus);
         ModPaintings.register(modEventBus);
 
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -57,6 +69,9 @@ public class MCCourseMod {
             ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI_SEEDS.get(), 0.20f);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SNAPDRAGON.getId(), ModBlocks.POTTED_SNAPDRAGON);
         });
+
+        BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION.get()));
+
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

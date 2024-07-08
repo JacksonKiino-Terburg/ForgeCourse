@@ -60,10 +60,17 @@
   "painting.mccourse.saw_them.title": "Saw Them",
   "painting.mccourse.saw_them.author": "NanoAttack",
 
+  "effect.mccourse.slimey": "Slimey",
+
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+
 
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valueables!",
   "tooltip.mccourse.metal_detector.tooltip" : "Press §eSHIFT§r for more Information",
   "tooltip.mccourse.sound_block": "Plays nice sounds when walking or right-clicking.",
 
-  "enchantment.mccourse.lightning_striker": "Lightning Striker"
+  "enchantment.mccourse.lightning_striker": "Lightning Striker",
+  "entity.minecraft.villager.mccourse.soundmaster": "Soundmaster"
 }
