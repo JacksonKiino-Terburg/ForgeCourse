@@ -2,6 +2,7 @@ package net.berlitz.mccourse.item;
 
 import net.berlitz.mccourse.MCCourseMod;
 import net.berlitz.mccourse.block.ModBlocks;
+import net.berlitz.mccourse.fluid.ModFluids;
 import net.berlitz.mccourse.item.custom.*;
 import net.berlitz.mccourse.sound.ModSounds;
 import net.minecraft.resources.ResourceLocation;
@@ -74,6 +75,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> ALEXANDRITE_SHIELD = ITEMS.register("alexandrite_shield",
             () -> new ShieldItem(new Item.Properties().durability(500)));
+
+    public static final RegistryObject<Item> SOAP_WATER_BUCKET = ITEMS.register("soap_water_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_SOAP_WATER, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

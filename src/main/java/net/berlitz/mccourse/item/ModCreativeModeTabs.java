@@ -42,6 +42,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RADIATION_STAFF.get());
                         output.accept(ModItems.ALEXANDRITE_BOW.get());
                         output.accept(ModItems.ALEXANDRITE_SHIELD.get());
+                        output.accept(ModItems.SOAP_WATER_BUCKET.get());
 
                         output.accept(ModBlocks.SNAPDRAGON.get());
 

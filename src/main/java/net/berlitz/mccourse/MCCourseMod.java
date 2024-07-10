@@ -4,15 +4,20 @@ import com.mojang.logging.LogUtils;
 import net.berlitz.mccourse.block.ModBlocks;
 import net.berlitz.mccourse.effect.ModEffects;
 import net.berlitz.mccourse.enchantment.ModEnchantments;
+import net.berlitz.mccourse.fluid.ModFluidTypes;
+import net.berlitz.mccourse.fluid.ModFluids;
 import net.berlitz.mccourse.item.ModCreativeModeTabs;
 import net.berlitz.mccourse.item.ModItemProperties;
 import net.berlitz.mccourse.item.ModItems;
 import net.berlitz.mccourse.loot.ModLootModifiers;
 import net.berlitz.mccourse.painting.ModPaintings;
+import net.berlitz.mccourse.particle.ModParticles;
 import net.berlitz.mccourse.potion.BetterBrewingRecipe;
 import net.berlitz.mccourse.potion.ModPotions;
 import net.berlitz.mccourse.sound.ModSounds;
 import net.berlitz.mccourse.villager.ModVillagers;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
@@ -56,8 +61,12 @@ public class MCCourseMod {
         ModPotions.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+        ModParticles.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -99,6 +108,9 @@ public class MCCourseMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
                 ModItemProperties.addCustomItemProperties();
+
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SOAP_WATER.get(), RenderType.translucent());
 
             });
         }

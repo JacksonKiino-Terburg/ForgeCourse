@@ -5,6 +5,7 @@ import net.berlitz.mccourse.block.custom.AlexandriteLampBlock;
 import net.berlitz.mccourse.block.custom.GemEmpoweringStationBlock;
 import net.berlitz.mccourse.block.custom.KohlrabiCropBlock;
 import net.berlitz.mccourse.block.custom.SoundBlock;
+import net.berlitz.mccourse.fluid.ModFluids;
 import net.berlitz.mccourse.item.ModItems;
 import net.berlitz.mccourse.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
@@ -92,8 +93,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> KOHLRABI_CROP = BLOCKS.register("kohlrabi_crop",
             () -> new KohlrabiCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
 
+    public static final RegistryObject<LiquidBlock> SOAP_WATER_BLOCK = BLOCKS.register("soap_water_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_SOAP_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).noCollission().noLootTable()));
+
     public static final RegistryObject<Block> GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
             () -> new GemEmpoweringStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
